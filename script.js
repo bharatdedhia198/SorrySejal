@@ -154,9 +154,38 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ══════════════════════════════
+//  TELEGRAM NOTIFICATIONS
+// ══════════════════════════════
+const TG_TOKEN = '8225952289:AAF6PjnNY8YkAX2yDn-SKW_wV_PHx68sIYQ';
+const TG_CHAT  = '792725430';
+
+const screenNames = {
+  1: '📱 Screen 1 — Sorry Intro',
+  2: '📜 Screen 2 — Our Memories',
+  3: '📸 Screen 3 — Polaroid Photos',
+  4: '💌 Screen 4 — Envelope',
+  5: '✉️ Screen 5 — Letter',
+  6: '🥺 Screen 6 — Forgiveness Meter',
+  7: '🎉 Screen 7 — 100% Forgiven!'
+};
+
+function tgNotify(msg) {
+  fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: TG_CHAT, text: msg })
+  }).catch(() => {});
+}
+
+// ══════════════════════════════
 //  SCREEN NAVIGATION
 // ══════════════════════════════
 let current = 1;
+
+// Notify when page first loads (Screen 1)
+window.addEventListener('load', () => {
+  tgNotify(`👀 Sejal opened the page!\n${screenNames[1]}`);
+});
 
 function goTo(n) {
   const curEl = document.getElementById('s' + current);
@@ -167,6 +196,7 @@ function goTo(n) {
     current = n;
     const nextEl = document.getElementById('s' + n);
     nextEl.classList.add('active');
+    tgNotify(`📍 Sejal moved to:\n${screenNames[n] || 'Screen ' + n}`);
   }, 500);
 }
 
@@ -199,6 +229,9 @@ function tapHeart() {
   // Update bar & label
   fill.style.width = forgiveness + '%';
   label.textContent = forgiveness + '% FORGIVEN';
+
+  // Notify forgiveness %
+  tgNotify(`🥺 Sejal forgave ${forgiveness}%!`);
 
   // Heart pop animation
   btn.style.transform = 'scale(1.4)';
