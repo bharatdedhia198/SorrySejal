@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Miss You, Sejal</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Floating hearts background -->
+  <div class="hearts-bg" id="heartsBg"></div>
+
+  <!-- ══ SCREEN 1 ══ -->
+  <div class="screen active" id="s1">
+    <div class="cat-gif-wrap">
+      <video src="S1.mp4" autoplay loop muted playsinline
+        style="width:100%;height:100%;object-fit:cover;border-radius:16px;"></video>
+      <div class="heart-badge">🥺</div>
+    </div>
+    <h1 class="title">I'm Very Very Sorry, Sejal 😭</h1>
+    <p class="subtitle">I apologize from the bottom of my heart. I've been feeling absolutely terrible every single day
+      knowing that I irritated u. U didn't deserve any of it and I hate myself for being the reason behind your
+      frustration. 🥺</p>
+    <p class="subtitle" style="margin-top:10px; font-size:0.95rem; color:#0f0f0f;">Please... just give me a chance to
+      say sorry properly. That's all I'm asking. 🙏</p>
+    <button class="btn-primary" onclick="goTo(2)">Okay fine, I'll listen</button>
+  </div>
+
+  <!-- ══ SCREEN 2 – MILESTONE ══ -->
+  <div class="screen" id="s2">
+    <div class="ms-screen">
+
+      <!-- scroll progress bar -->
+      <div class="ms-progress-bar">
+        <div class="ms-progress-fill" id="msProgressFill"></div>
+      </div>
+      <!-- memories counter -->
+      <div class="ms-counter" id="msCounter">0 / 11 memories</div>
+
+      <div class="ms-header">
+        <h2 class="ms-title">Our frndship, Sejal 🥹</h2>
+        <p class="ms-sub">Every memory I hold close to my heart...</p>
+        <div class="scroll-hint"><span>scroll to relive our memories</span>
+          <div class="scroll-arrow">↓</div>
+        </div>
+      </div>
+
+      <div class="ms-scroll" id="msScroll">
+
+        <div class="ms-node">
+          <div class="ms-icon">🌸</div>
+          <div class="ms-card">
+            <div class="ms-tag">October</div>
+            <h3>Where It All Began</h3>
+            <p>Last year Oct we became friends... and within just a few months you had become my best friend. Something I never
+              expected but will always be grateful for. 🥺</p>
+          </div>
+        </div>
+
+        <div class="ms-node">
+          <div class="ms-icon">☀️</div>
+          <div class="ms-card">
+            <div class="ms-tag">Every Morning</div>
+            <h3>Rose Milk/Smoothie & Morning Walks</h3>
+            <p>I'd wake you up, bring rose milk or coffee and fruits, or we would make smoothie, and we'd walk together
+              from your place to Pragati Kendra. Those mornings were my favourite part of the day. 🌹</p>
+          </div>
+        </div>
+
+        <div class="ms-node">
+          <div class="ms-icon">💬</div>
+          <div class="ms-card">
+            <div class="ms-tag">Every Day</div>
+            <h3>Spending time</h3>
+            <p>Even after reaching our plants, we'd keep chatting almost every hour. And then our evening walks... those
+              couple of hours after office, almost every single day. U shared ur entire lifestory.😊</p>
+          </div>
+        </div>
+
+        <div class="ms-node">
+          <div class="ms-icon">🙏</div>
+          <div class="ms-card">
+            <div class="ms-tag">For Dee</div>
+            <h3>The Ujjain Trip</h3>
+            <p>All I wanted was to see you happy — so I planned, organised and managed the entire Ujjain trip so you
+              could pray for him.</p>
+          </div>
+        </div>
+
+        <div class="ms-node">
+          <div class="ms-icon">🛍️</div>
+          <div class="ms-card">
+            <div class="ms-tag">Before Ujjain</div>
+            <h3>Dupatta Shopping & Lalta Pav Bhaji</h3>
+            <p>The dupatta shopping, lalta pav bhaji, all the planning... and then Ujjain itself. We laughed, we
+              travelled, we made memories. 😄</p>
+          </div>
+        </div>
+
+        <div class="ms-node">
+          <div class="ms-icon">🎨</div>
+          <div class="ms-card">
+            <div class="ms-tag">Holi</div>
+            <h3>Half Day at Your Place</h3>
+            <p>Cooking together, playing Jenga, then Rani Baug in Byculla, and T-shirt shopping in Dadar for you and
+              Dee. One of the most fun days of my life. U remember lifting you and making u sit on the platform?</p>
+          </div>
+        </div>
+
+        <div class="ms-node">
+          <div class="ms-icon">😂</div>
+          <div class="ms-card">
+            <div class="ms-tag">R-City Mall</div>
+            <h3>Sneaker Wipes 😂</h3>
+            <p>Going all the way to R-City mall just to buy sneaker wipes. Only we could do something like that and make
+              it the good outing ever. 🤣</p>
+          </div>
+        </div>
+
+        <div class="ms-node">
+          <div class="ms-icon">🍽️</div>
+          <div class="ms-card">
+            <div class="ms-tag">Ghatkopar</div>
+            <h3>"Like a Free Bird"</h3>
+            <p>That dinner with Jui where we laughed so much and you said — "After a long time, I lived like a free
+              bird." I was so happy seeing you happy. 🕊️</p>
+          </div>
+        </div>
+
+        <div class="ms-node">
+          <div class="ms-icon">🚂</div>
+          <div class="ms-card">
+            <div class="ms-tag">Thane → Kalyan</div>
+            <h3>Peak of Our Friendship</h3>
+            <p>We talked, laughed, cherishing our bond. That's when our friendship truly felt like it was at its peak.
+              🌟</p>
+          </div>
+        </div>
+
+        <div class="ms-node">
+          <div class="ms-icon">🫶</div>
+          <div class="ms-card ms-card-warm">
+            <div class="ms-tag">Always</div>
+            <h3>You Were Family to Me</h3>
+            <p>Sejal, I never considered you just a friend. I considered you family. I was there when you had fever in
+              January, when your ear was bleeding in April... you mattered more than words can say. 🙏</p>
+          </div>
+        </div>
+
+        <div class="ms-node ms-node-final">
+          <div class="ms-icon ms-icon-final">😭</div>
+          <div class="ms-card ms-card-final">
+            <div class="ms-tag">Today</div>
+            <h3>Please Give Us One Last Chance</h3>
+            <p>I miss my best friend. I miss those days. I miss laughing with you over the smallest things. After
+              everything we shared... please, Sejal. Ek last chance de de apni friendship ko. 😭</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="ms-scroll-indicator" id="msScrollIndicator">
+        <div class="msi-wheel">
+          <div class="msi-dot" id="msiDot"></div>
+        </div>
+        <span class="msi-label">scroll</span>
+      </div>
+
+      <div class="nav-row" style="padding:16px 20px 24px;flex-shrink:0;">
+        <button class="btn-back" onclick="goTo(1)">← Back</button>
+        <button class="btn-next" id="tlNext" onclick="goTo(3)"
+          style="opacity:0;pointer-events:none;transition:opacity 0.6s;">Next →</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ SCREEN 3 – POLAROID SWIPER ══ -->
+  <div class="screen" id="s3">
+    <h2 class="polaroid-title">Some Sweet Moments</h2>
+    <p class="polaroid-sub"></p>
+
+    <div class="polaroid-row">
+
+      <div class="polaroid-card">
+        <div class="polaroid-photo">
+          <img src="p1.jpeg" alt="memory 1">
+        </div>
+        <p class="polaroid-caption">I'm Sorry</p>
+      </div>
+
+      <div class="polaroid-card">
+        <div class="polaroid-photo">
+          <img src="p2.jpeg" alt="memory 2">
+        </div>
+        <p class="polaroid-caption">1 last chance pls</p>
+      </div>
+
+    </div>
+
+    <div class="nav-row">
+      <button class="btn-back" onclick="goTo(2)">← Back</button>
+      <button class="btn-next" onclick="goTo(4)">Next →</button>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN 4 – ENVELOPE ══ -->
+  <div class="screen" id="s4">
+    <div class="envelope-wrap" id="envWrap" onclick="openEnvelope()">
+      <div class="envelope">
+        <div class="env-body">
+          <div class="env-flap" id="envFlap"></div>
+        </div>
+      </div>
+    </div>
+    <p class="click-label">I have written something... please click the envelope 💌</p>
+    <div class="nav-row" style="margin-top:20px;">
+      <button class="btn-back" onclick="goTo(3)">← Back</button>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN 5 – LETTER ══ -->
+  <div class="screen" id="s5">
+    <div class="letter-card">
+      <p><em>My Dearest Sejal,</em></p>
+      <p>I am just asking you, from the deepest corner of my heart, please give our friendship one last chance. I am not
+        saying any of this to put pressure on you or make you feel guilty.
+        Please, Sejal… can we try once more?
+
+        Not by forcing things to become perfect immediately. But slowly… with patience, understanding and effort.
+
+        I miss my best friend.
+        I miss those days.
+        I miss laughing with you over the smallest things.
+        I miss listening to you.
+
+        I know I cannot demand the old Sejal back. I cannot demand that everything becomes the way it once was. All I
+        can do is ask you for one genuine chance to rebuild what we lost.
+
+        I promise I will value that chance with everything I have. I will listen. I will understand. I will respect your
+        boundaries. I will work on whatever went wrong from my side. I don't expect everything to become normal in one
+        day—I am ready to rebuild our friendship one small step at a time.
+
+        Because after everything we shared, I still believe that something so beautiful deserves at least one sincere
+        attempt to be repaired.
+
+        Please, Sejal… ek last chance de de apni friendship ko.
+        Let us try to repair what broke.
+
+        I won't take that chance for granted.
+        I won't disappoint you.
+        I will genuinely try my best to protect and value our friendship.
+
+        Please… ek baar. Bas ek last chance. 😭
+        Kya mai ek aakhri chance ke layak bhi nahi ?</p>
+      <img class="letter-cat" src="10.jfif" alt="cute cat"
+        onerror="this.src='10.jfif'">
+    </div>
+    <div class="nav-row" style="margin-top:16px;">
+      <button class="btn-back" onclick="goTo(4)">← Back</button>
+      <button class="btn-next" onclick="goTo(6)">Next →</button>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN 6 – FORGIVENESS METER ══ -->
+  <div class="screen" id="s6">
+    <div class="meter-card">
+      <div class="meter-title">FORGIVENESS METER 🥺</div>
+      <img class="meter-gif" src="1.gif" alt="bear" id="meterGif"
+        onerror="this.src='1.gif'">
+      <p class="sorry-na-label">SORRY NA</p>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <div class="pct-label" id="pctLabel">0% FORGIVEN</div>
+      <div class="tap-label">Tap the emoji to forgive </div>
+      <button class="heart-btn" id="heartBtn" onclick="tapHeart()">🥺</button>
+      <div class="nav-row" style="margin-top:20px;">
+        <button class="btn-back" onclick="goTo(5)">← Back</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SCREEN 7 – 100% FORGIVEN ══ -->
+  <div class="screen" id="s7">
+    <div class="meter-card forgiven-card">
+      <div class="meter-title">FORGIVENESS METER 🥹</div>
+      <img class="meter-gif" src="11.jfif" alt="bears hugging"
+        onerror="this.src='11.jfif'">
+      <div class="progress-track">
+        <div class="progress-fill" style="width:100%"></div>
+      </div>
+      <div class="pct-label">100% FORGIVEN</div>
+      <div class="forgiven-label">🌸Thank you, Sejal 🥹</div>
+      <div class="nav-row" style="margin-top:20px;">
+        <button class="btn-back" onclick="goTo(6)">← Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
